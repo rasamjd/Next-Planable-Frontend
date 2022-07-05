@@ -1,0 +1,161 @@
+          <div className="sunSec section">
+            <div className="planDayInfo">
+              <b className="sunPlanDay planDay">sun.</b>
+              <p className="sunPlanDayDate planDayDate">5.6.2022</p>
+              <input type="number"
+                    className='inputMinsun inputMin'
+                    onChange={sunChanges}
+                    name="sunMin"
+              />
+              <span className='-break'>-</span>
+              <input type="number"
+                    className='inputMaxsun inputMax'
+                    onChange={sunChanges}
+                    name="sunMax"
+              />
+            </div>
+            <div className="sunPlan plan 1">
+              <div className="sunPlanHours planHours">
+              </div>
+              <div className="sunPlanBar planBar"
+                style={{left: `${planData.sunMin / 24 * 800}px`,
+                        right: `${(24 - planData.sunMax) / 24 * 800}px`}}>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div className="monSec section">
+            <div className="planDayInfo">
+              <b className="monPlanDay planDay">mon.</b>
+              <p className="monPlanDayDate planDayDate">5.6.2022</p>
+              <input type="number"
+                    className='inputMinmon inputMin'
+                    onChange={monChanges}
+                    name="monMin"
+              />
+              <span className='-break'>-</span>
+              <input type="number"
+                    className='inputMaxmon inputMax'
+                    onChange={monChanges}
+                    name="monMax"
+              />
+            </div>
+            <div className="monPlan plan 1">
+              <div className="monPlanHours planHours">
+              </div>
+              <div className="monPlanBar planBar"
+                style={{left: `${planData.monMin / 24 * 800}px`,
+                        right: `${(24 - planData.monMax) / 24 * 800}px`}}>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div className="tueSec section">
+            <div className="planDayInfo">
+              <b className="tuePlanDay planDay">tue.</b>
+              <p className="tuePlanDayDate planDayDate">5.6.2022</p>
+              <input type="number"
+                    className='inputMintue inputMin'
+                    onChange={tueChanges}
+                    name="tueMin"
+              />
+              <span className='-break'>-</span>
+              <input type="number"
+                    className='inputMaxtue inputMax'
+                    onChange={tueChanges}
+                    name="tueMax"
+              />
+            </div>
+            <div className="tuePlan plan 1">
+              <div className="tuePlanHours planHours">
+              </div>
+              <div className="tuePlanBar planBar"
+                style={{left: `${planData.tueMin / 24 * 800}px`,
+                        right: `${(24 - planData.tueMax) / 24 * 800}px`}}>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div className="wedSec section">
+            <div className="planDayInfo">
+              <b className="wedPlanDay planDay">wed.</b>
+              <p className="wedPlanDayDate planDayDate">5.6.2022</p>
+              <input type="number"
+                    className='inputMinwed inputMin'
+                    onChange={wedChanges}
+                    name="wedMin"
+              />
+              <span className='-break'>-</span>
+              <input type="number"
+                    className='inputMaxwed inputMax'
+                    onChange={wedChanges}
+                    name="wedMax"
+              />
+            </div>
+            <div className="wedPlan plan 1">
+              <div className="wedPlanHours planHours">
+              </div>
+              <div className="wedPlanBar planBar"
+                style={{left: `${planData.wedMin / 24 * 800}px`,
+                        right: `${(24 - planData.wedMax) / 24 * 800}px`}}>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div className="thuSec section">
+            <div className="planDayInfo">
+              <b className="thuPlanDay planDay">thu.</b>
+              <p className="thuPlanDayDate planDayDate">5.6.2022</p>
+              <input type="number"
+                    className='inputMinthu inputMin'
+                    onChange={thuChanges}
+                    name="thuMin"
+              />
+              <span className='-break'>-</span>
+              <input type="number"
+                    className='inputMaxthu inputMax'
+                    onChange={thuChanges}
+                    name="thuMax"
+              />
+            </div>
+            <div className="thuPlan plan 1">
+              <div className="thuPlanHours planHours">
+              </div>
+              <div className="thuPlanBar planBar"
+                style={{left: `${planData.thuMin / 24 * 800}px`,
+                        right: `${(24 - planData.thuMax) / 24 * 800}px`}}>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div className="friSec section">
+            <div className="planDayInfo">
+              <b className="friPlanDay planDay">fri.</b>
+              <p className="friPlanDayDate planDayDate">5.6.2022</p>
+              <input type="number"
+                    className='inputMinfri inputMin'
+                    onChange={friChanges}
+                    name="friMin"
+              />
+              <span className='-break'>-</span>
+              <input type="number"
+                    className='inputMaxfri inputMax'
+                    onChange={friChanges}
+                    name="friMax"
+              />
+            </div>
+            <div className="friPlan plan 1">
+              <div className="friPlanHours planHours">
+              </div>
+              <div className="friPlanBar planBar"
+                style={{left: `${planData.friMin / 24 * 800}px`,
+                        right: `${(24 - planData.friMax) / 24 * 800}px`}}>
+              </div>
+            </div>
+          </div>
+          <br />

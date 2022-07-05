@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bubbler+One&family=Carrois+Gothic&family=Josefin+Slab&family=Poppins:wght@200&family=Press+Start+2P&family=Varela&family=Zen+Kaku+Gothic+New&display=swap");
+
+body {
+  background-color: rgb(231, 231, 231);
+  margin: auto;
+  font-family: "poppins", sans-serif;
+}
+
+::selection {
+  color: rgb(39, 136, 0);
+  background: rgb(0, 255, 149);
+}
+
+.container {
+  background-color: rgb(230, 230, 230);
+  color: rgb(230, 230, 230);
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+  top: 0;  
+  width: 100%;
+  height: 750px;
+  position: relative;
+  text-align: center;
+}
+
+.title {
+  background: repeating-linear-gradient(
+      90deg,
+      rgb(72, 255, 0) 0px,
+      rgb(72, 255, 0) 170px,
+      rgb(0, 255, 149) 170px,
+      rgb(0, 255, 149) 350px
+  ) ;
+  color: rgb(46, 46, 46);
+  border-radius: 25px;
+  font-size: 60px;
+  height: 80px;
+  width: 350px;
+  margin: auto;
+  text-align: center;
+  top: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-weight: 900;
+}
+
+.description {
+  position: absolute;
+  margin: auto;
+  background-color: rgb(220, 220, 220);
+  color: rgb(46, 46, 46);
+  height: 100px;
+  width: 500px;
+  top: 180px;
+  border-radius: 10px;
+  padding: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-left: solid 5px rgb(0, 255, 149);
+  font-size: 18px;
+}
+
+.btns {
+  position: absolute;
+  top: 360px;
+  text-align: center;
+  padding: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 600px;
+}
+
+.join-div {
+  position: absolute;
+  display: inline-block;
+  width: 280px;
+  height: 205px;
+  background-color: rgb(225, 225, 225);
+  left: 0px;
+  padding-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px 19px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.join-div:hover {
+  box-shadow: 0px 30px 34px 7px rgba(0,0,0,0.36)  ;
+}
+
+.create-div {
+  position: absolute;
+  display: inline-block;
+  width: 280px;
+  height: 205px;
+  background-color: rgb(225, 225, 225);
+  right: 0px;
+  padding-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px 19px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.create-div:hover {
+  box-shadow: 0px 30px 34px 7px rgba(0,0,0,0.36)  ;
+}
+
+.ep {
+  margin: 20px;
+}
+
+@keyframes shadow {
+  from {box-shadow: 0px 0px 50px 19px rgba(0,0,0,0.1)}
+  to {box-shadow: 0px 30px 34px 7px rgba(0,0,0,0.36)}
+}
+
+
+.btn {
+  margin: 5px;
+  width: 200px;
+  height: 60px;
+  border-radius: 0;
+  border: solid 2px ;
+  font-size: 27px;
+  text-transform: uppercase;
+  font-family: "poppins", sans-serif;
+  display: inline-block;
+  padding-top: 25px;
+}
+
+.join {
+  background-color: rgb(72, 255, 0);
+  color: rgb(37, 129, 0);
+  border-color: rgb(72, 255, 0);
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.join:hover {
+  color: rgb(46, 46, 46);
+  background-color: rgb(72, 255, 0);
+  border-radius: 50px;
+  border: solid 2px rgb(46, 46, 46);
+}
+
+.create {
+  background-color: rgb(0, 255, 149);
+  color: rgb(0, 126, 73);
+  border-color: rgb(0, 255, 149);
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.create:hover {
+  color: rgb(46, 46, 46);
+  background-color: rgb(0, 255, 149);
+  border-radius: 50px;
+  border: solid 2px rgb(46, 46, 46);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background-color: rgb(72, 255, 0);
+  color: rgb(39, 136, 0);
+  font-size: 15px;
+  width: 250px;
+  height: 28px;
+  left: 50%;
+  padding-top: 9px;
+  transform: translate(-50%, 0);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
