@@ -38,7 +38,7 @@ function JoinPlan() {
       }
     }
 
-    axios.get("http://localhost:5000/join-plan", checkData)
+    axios.get("https://mern-planable-server.herokuapp.com/join-plan", checkData)
     .then((response) => {
       if (response.data.length == 1) {
         window.location = `/plan/${joinState.joinPlanCode}`;
