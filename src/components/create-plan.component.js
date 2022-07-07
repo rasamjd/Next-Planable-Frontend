@@ -32,7 +32,7 @@ function CreatePlan() {
         date : createState.planCreateDate
       }
 
-      axios.post("https://mern-planable-server.herokuapp.com/create-plan", planData)
+      axios.post("https://mern-planable.herokuapp.com/create-plan", planData)
         .then((resault) => console.log(`Plan info posted successfully: ${resault}`))
         .catch((error) => console.log(error.response.data))
     }

@@ -16,7 +16,7 @@ function Entry() {
               <Link to="/join-plan" style={{ textDecoration: 'none' }} className="join btn">Join Plan
               </Link>
               <br />
-            <p className='ep'>Join an already created Plan easily</p>
+            <p className='ep'>Join an existing Plan easily</p>
             </div>
             <div className="create-div">
               <Link to="/create-plan" style={{ textDecoration: 'none' }} className="create btn">Create Plan

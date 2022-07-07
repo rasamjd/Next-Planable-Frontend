@@ -106,7 +106,7 @@ function Plan() {
   const params = useParams();
 
   useEffect(() => {
-    axios.get(`https://mern-planable-server.herokuapp.com/plan/${params.code}`, { params: {
+    axios.get(`https://mern-planable.herokuapp.com/plan/${params.code}`, { params: {
       code: params.code
     }})
       .then((days) => {
@@ -163,7 +163,7 @@ function Plan() {
       ]
   
       daysData.forEach((dayData) => {
-        axios.post(`https://mern-planable-server.herokuapp.com/plan/${params.code}`, dayData)
+        axios.post(`https://mern-planable.herokuapp.com/plan/${params.code}`, dayData)
           .catch((err) => console.error(err))
       })
 
