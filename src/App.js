@@ -15,7 +15,7 @@ function App() {
         <Route index element={<Entry />} />
         <Route path="create-plan" element={<CreatePlan />} />
         <Route path="join-plan" element={<JoinPlan />} />
-        <Route path="plan/589777" element={<Plan />} />
+        <Route path="plan/:code" element={<Plan />} />
       </Route>
     </Routes>
   </Router>
