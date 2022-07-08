@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 function Plan() {
-  /*
+
   const [planState, setPlanState] = useState(0)
   
   const [planData, setPlanData] = useState({
@@ -430,10 +430,7 @@ function Plan() {
           </div>
         </div>
     )
-  }*/
-  return (
-    <h2>Hi... this is a try</h2>
-  )
+  }
 }
 
 export default Plan;
