@@ -10,15 +10,15 @@ import Plan from "./components/plan.component.js"
 function App() {
   return (
     <Router>
-    <Routes>
-      <Route path="/">
-        <Route index element={<Entry />} />
-        <Route path="create-plan" element={<CreatePlan />} />
-        <Route path="join-plan" element={<JoinPlan />} />
-        <Route path="plan" element={<Plan />} />
-      </Route>
-    </Routes>
-  </Router>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Entry />} />
+          <Route path="create-plan" element={<CreatePlan />} />
+          <Route path="join-plan" element={<JoinPlan />} />
+          <Route path="plan/:code" element={<Plan />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
   

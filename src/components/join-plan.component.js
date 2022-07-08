@@ -41,7 +41,7 @@ function JoinPlan() {
     axios.get("https://mern-planable.herokuapp.com/join-plan", checkData)
     .then((response) => {
       if (response.data.length == 1) {
-        window.location = `/plan?code=${joinState.joinPlanCode}`;
+        window.location = `/plan/${joinState.joinPlanCode}`;
       }
       else if (response.data.length == 0) {
         alert("Plan not found!");
@@ -79,7 +79,7 @@ function JoinPlan() {
               type="submit" 
               value="Join"
           />
-        <Link to="/" style={{ textDecoration: 'none' }} className="home-btn">Cancel
+        <Link to={`/plan/${joinState.joinPlanCode}`} style={{ textDecoration: 'none' }} className="home-btn">Cancel
         </Link>
         </form>
         </div>

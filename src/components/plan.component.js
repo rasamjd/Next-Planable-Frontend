@@ -1,4 +1,4 @@
-import { Link, useParams, useLocation } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import "./plan-component.css"
 import axios from 'axios';
@@ -106,15 +106,9 @@ function Plan() {
 
   const params = useParams();
 
-  const { openPlanCode } = useLocation();
-
-  const query = new URLSearchParams(openPlanCode)
-  const currentCode = query.get("code")
-
   useEffect(() => {
-
-    axios.get(`https://mern-planable.herokuapp.com/plan/${currentCode}`, { params: {
-      code: currentCode
+    axios.get(`https://mern-planable.herokuapp.com/plan/${params.code}`, { params: {
+      code: params.code
     }})
       .then((days) => {
         console.log(days.data)
@@ -170,7 +164,7 @@ function Plan() {
       ]
   
       daysData.forEach((dayData) => {
-        axios.post(`https://mern-planable.herokuapp.com/plan/${currentCode}`, dayData)
+        axios.post(`https://mern-planable.herokuapp.com/plan/${params.code}`, dayData)
           .catch((err) => console.error(err))
       })
 
