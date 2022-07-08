@@ -41,7 +41,7 @@ function JoinPlan() {
     axios.get("https://mern-planable.herokuapp.com/join-plan", checkData)
     .then((response) => {
       if (response.data.length == 1) {
-        window.location = `/?plan=${joinState.joinPlanCode}`;
+        window.location = `/plan?code=${joinState.joinPlanCode}`;
       }
       else if (response.data.length == 0) {
         alert("Plan not found!");
