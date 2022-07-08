@@ -3,8 +3,11 @@ import { useState, useEffect } from "react";
 import "./plan-component.css"
 import axios from 'axios';
 
-function Plan() {
 
+function Plan() {
+  
+  const [planState, setPlanState] = useState(0)
+  /*
   const [planData, setPlanData] = useState({
     satMin: 0, satMax: 0,
     sunMin: 0, sunMax: 0,
@@ -30,8 +33,6 @@ function Plan() {
   const [nameCSS, setNameCSS] = useState({
     bottom: "", fontSize: "", color:"", checkMark:0
   })
-
-  const [planState, setPlanState] = useState(0)
 
   const nameCheck = (e) => {
     setUserData((prevData) => {
@@ -174,7 +175,7 @@ function Plan() {
       alert("You should pick a username")
     }
   }
-
+  */
   if (planState === 0) {
     return(
       <div className="planLayout">
