@@ -112,10 +112,10 @@ function Plan() {
     const params = new Proxy(new URLSearchParams(window.location.search), {
       get: (searchParams, prop) => searchParams.get(prop),
     });
-    const code = params.code
+    const code = params.plan
 
     axios.get(`https://mern-planable.herokuapp.com/?plan=${code}`, { params: {
-      code: params.code
+      code: params.plan
     }})
       .then((days) => {
         console.log(days.data)
