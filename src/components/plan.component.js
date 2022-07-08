@@ -5,9 +5,9 @@ import axios from 'axios';
 
 
 function Plan() {
-  
-  const [planState, setPlanState] = useState(0)
   /*
+  const [planState, setPlanState] = useState(0)
+  
   const [planData, setPlanData] = useState({
     satMin: 0, satMax: 0,
     sunMin: 0, sunMax: 0,
@@ -175,7 +175,7 @@ function Plan() {
       alert("You should pick a username")
     }
   }
-  */
+  
   if (planState === 0) {
     return(
       <div className="planLayout">
@@ -430,7 +430,10 @@ function Plan() {
           </div>
         </div>
     )
-  }
+  }*/
+  return (
+    <h2>Hi... this is a try</h2>
+  )
 }
 
 export default Plan;
