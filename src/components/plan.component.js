@@ -107,7 +107,14 @@ function Plan() {
   const params = useParams();
 
   useEffect(() => {
-    axios.get(`https://mern-planable.herokuapp.com/plan/${params.code}`, { params: {
+    //axios.get(`https://mern-planable.herokuapp.com/plan/${params.code}`, { params: {
+    //  code: params.code
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+    const code = params.code
+
+    axios.get(`https://mern-planable.herokuapp.com/?plan=${code}`, { params: {
       code: params.code
     }})
       .then((days) => {
