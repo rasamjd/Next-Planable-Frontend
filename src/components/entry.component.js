@@ -1,26 +1,23 @@
 import { Link } from 'react-router-dom';
-import "./entry-component.css"
-import logo from "../PLANABLE.png"
+import "./entry-component-test.css"
+import logo from "../PLANABLE(2).png"
 
 function Entry() {
     return (
         <div className="container">
-          <div className='logo'>
-            <div className='logoBG'>
-            </div>
-          </div>
+          <img src={logo} className="logo"/>
           <p className="description">
             Create or Join a plan with people you're looking forward to have a meeting with.
             Review other timings and add your own schedule. Find the best time simply.
           </p>
           <div className="btns">
-            <div className="join-div">
+            <div className="join-div hoverable">
               <Link to="/join-plan" style={{ textDecoration: 'none' }} className="join btn">Join Plan
               </Link>
               <br />
             <p className='ep'>Join an existing Plan easily</p>
             </div>
-            <div className="create-div">
+            <div className="create-div hoverable">
               <Link to="/create-plan" style={{ textDecoration: 'none' }} className="create btn">Create Plan
               </Link>
               <br />
