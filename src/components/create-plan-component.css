@@ -48,11 +48,11 @@ body {
   display: inline-block;
   width: 350px;
   height: 450px;
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(235, 235, 235);
   left: 0px;
   padding-top: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 40px 1px rgb(110, 255, 195);
+  box-shadow: 0px 25px 30px -10px #363636;
   text-align: center;
   font-size: 20px;
   left: 50%;
@@ -68,7 +68,7 @@ body {
   height: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-left: solid 2px rgb(0, 255, 149);
+  border-left: solid 4px rgb(0, 255, 149);
   color: rgb(46, 46, 46);
   padding-left: 5px;
   transition: 0.2s;
@@ -76,13 +76,13 @@ body {
 
 .create-input:focus {
   outline: 0;
-  border-left: solid 4px rgb(0, 255, 149);
+  border: solid 1px rgb(0, 255, 149); 
   background-color: rgb(240, 240, 240);
 }
 
 .datepicker:focus {
   outline: 0;
-  border-left: solid 4px rgb(0, 255, 149);
+  border: solid 1px rgb(0, 255, 149); 
   background-color: rgb(240, 240, 240);
 }
 
@@ -95,7 +95,7 @@ body {
   height: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-left: solid 2px rgb(0, 255, 149);
+  border-left: solid 4px rgb(0, 255, 149);
   color: rgb(46, 46, 46); 
 }
 

@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import "./entry-component.css"
+import logo from "../PLANABLE.png"
 
 function Entry() {
     return (
-      <div className="container">
-        <div className="title">
-          Planable
+        <div className="container">
+          <div className='logo'>
+            <div className='logoBG'>
+            </div>
           </div>
           <p className="description">
             Create or Join a plan with people you're looking forward to have a meeting with.
@@ -26,9 +28,9 @@ function Entry() {
             </div>
           </div>
           <div className="footer">
-          Made using MERN Stack    
-          </div>
-      </div>
+            Made using MERN Stack    
+        </div>
+        </div>
     );
 }
 

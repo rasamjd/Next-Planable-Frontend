@@ -13,24 +13,19 @@
   height: 2330px;
 }
 
-.appName {
-  background: repeating-linear-gradient(
-      90deg,
-      rgb(72, 255, 0) 0px,
-      rgb(72, 255, 0) 102px,
-      rgb(0, 255, 149) 102px,
-      rgb(0, 255, 149) 210px
-  ) ;
-  color: rgb(46, 46, 46);
-  font-weight: 900;
-  border-radius: 25px;
-  font-size: 35px;
-  height: 60px;
-  width: 210px;
-  text-align: center;
-  top: 30px;
+.planLogo {
+  object-fit: cover;
+  height: 70px;
+  width: 300px;
+  right: 20px;
   position: absolute;
-  right: 24px;
+  background: url("../PLANABLE(2).png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 20px;
+  margin-bottom: 100px;
+  border-radius: 20px;
 }
 
 .infoBox {
@@ -422,10 +417,9 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(216, 214, 214);
   width: 320px;
   height: 420px;
-  box-shadow: inset 10px 10px 10px 10px #5c4848;
   top: 50px;
   border: solid 4px rgb(206, 206, 206);
   border-radius: 30px;
@@ -439,7 +433,7 @@
   height: 420px;
   border-radius: 30px;
   transform: translate(-50%, 0);
-  box-shadow: 13px 13px 40px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 30px 20px -10px rgba(0,0,0,0.5);
   background-color: rgba(209, 255, 236, 0);
 }
 
@@ -456,4 +450,123 @@
   padding-top: 40px;
   border-radius: 10px;
   font-size: large;
+}
+
+.errorTable {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 600px;
+  height: 150px;
+  top: 150px;
+  border-radius: 30px;
+  border: solid 4px rgb(206, 206, 206);
+  background-color: rgb(241, 215, 215);
+  box-shadow: 0px 20px 30px -10px rgba(0,0,0,0.5);
+}
+
+.error {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: rgb(163, 26, 26);
+  top: 20px;
+  width: 500px;
+}
+
+.error-btn {
+  background-color: rgb(236, 233, 233);
+  position: absolute;
+  width: 100px;
+  height: 40px;  
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 20px;
+  text-align: center;
+  padding-top: 10px;
+  color: rgb(36, 35, 35);
+  transition: 500ms;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.error-btn:hover {
+  border-radius: 25px;
+  border: solid 1px black;
+}
+
+.loadingTable {
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  border: solid 4px rgb(202, 202, 202);
+  color: rgb(110, 110, 110);
+  background-color: rgb(222, 222, 222);
+  font-weight: bolder;
+  top: 200px;
+  width: 200px;
+  height: 100px;
+  border-radius: 30px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgb(77, 77, 77);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
 }

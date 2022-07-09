@@ -6,18 +6,8 @@ import "./join-plan-component.css"
 function JoinPlan() {
 
   const [joinState, setJoinState] = useState({
-    joinPlanName: "",
     joinPlanCode: 0
   })
-
-  const onNameChange = (e) => {
-    setJoinState((prevData) => {
-      return {
-        ...prevData,
-        joinPlanName: e.target.value
-      }
-    })
-  }
 
   const onCodeChange = (e) => {
     setJoinState((prevData) => {
@@ -28,12 +18,11 @@ function JoinPlan() {
     })
   }
 
-  const handleSubmit = (e) => {
+  /*const handleSubmit = (e) => {
     e.preventDefault();
 
     const checkData = { 
       params: {
-        name: joinState.joinPlanName,
         code: joinState.joinPlanCode
       }
     }
@@ -50,7 +39,7 @@ function JoinPlan() {
     })
 
     console.log(checkData)
-  }
+  }*/
 
   return (
     <div className="container">
@@ -58,15 +47,8 @@ function JoinPlan() {
         <div className='join-title'>
           Join a Plan
         </div>
-        <form className='form' onSubmit={handleSubmit}>
-        <label>Plan Name</label>
-        <br />
-        <input type="text"
-              className='joinInput'
-              onChange={onNameChange}
-              placeholder="E.g. Cafe plan"
-          />
-        <br />
+        <form className='form'>
+        
         <label>Plan Code</label>
         <br />
         <input type="number" 
@@ -75,11 +57,13 @@ function JoinPlan() {
               placeholder="E.g. 1234"
           />
         <br />
-        <input className="join-input-submit" 
-              type="submit" 
-              value="Join"
-          />
-        <Link to={`/plan/${joinState.joinPlanCode}`} style={{ textDecoration: 'none' }} className="home-btn">Cancel
+        <Link to={`/plan/${joinState.joinPlanCode}`} 
+              style={{ textDecoration: 'none' }}
+              className="join-input-submit" >Join
+        </Link>  
+        <Link to="/" 
+              style={{ textDecoration: 'none' }} 
+              className="home-btn">Cancel
         </Link>
         </form>
         </div>

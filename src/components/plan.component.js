@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 import "./plan-component.css"
 import axios from 'axios';
 
-
 function Plan() {
 
-  const [planState, setPlanState] = useState(0)
+  const [planState, setPlanState] = useState(3)
   
   const [planData, setPlanData] = useState({
     satMin: 0, satMax: 0,
@@ -111,6 +110,11 @@ function Plan() {
       code: params.code
     }})
       .then((days) => {
+        if (days.data.length == 0) {
+          setPlanState(2)
+        }
+        else {
+          setPlanState(0)
         console.log(days.data)
 
         const model = (day) => {
@@ -146,6 +150,7 @@ function Plan() {
               setPrevFri((prev) => [...prev, model(day)])
           }
         })
+        }
       })
       .catch((err) => console.log(err))
   }, [])
@@ -180,9 +185,7 @@ function Plan() {
     return(
       <div className="planLayout">
           <div className="infoBox">
-            <div className="appName">
-              Planable
-            </div>
+            <div className="planLogo"></div>
             <h4 className="appTitle" title='Plan Name'>{}</h4>
             <h5 className="appCode" title='Plan Code'>{params.code}</h5>
             <p className="appDescription">Add your schedule every day and review others.</p>
@@ -429,6 +432,24 @@ function Plan() {
             </div>
           </div>
         </div>
+    )
+  }
+  else if (planState === 2) {
+    return (
+      <div className="errorTable">
+        <code className="error">Ooops!
+          Looks like the Plan you're looking for doesn't exist.</code>
+        <Link to="/join-plan" style={{ textDecoration: 'none' }} className="error-btn">Back
+          </Link>
+      </div>
+    )  
+  }
+  else if (planState === 3) {
+    return (
+      <div className="loadingTable">
+        Loading
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      </div>
     )
   }
 }
