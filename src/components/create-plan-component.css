@@ -47,12 +47,12 @@ body {
   position: absolute;
   display: inline-block;
   width: 350px;
-  height: 450px;
-  background-color: rgb(235, 235, 235);
+  height: 490px;
+  background-color: rgb(240, 240, 240);
   left: 0px;
   padding-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 25px 30px -10px #363636;
+  border-radius: 30px;
+  box-shadow: 0 0 40px -9px rgb(92, 92, 92);
   text-align: center;
   font-size: 20px;
   left: 50%;
@@ -61,49 +61,53 @@ body {
 
 .create-input {
   border: 0;
-  background-color: rgb(216, 216, 216);
+  background-color: inherit;
   border-radius: 5px;
-  font-size: 18px;
-  width: 300px;
-  height: 30px;
+  font-size: 21px;
+  width: 270px;
+  padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-left: solid 4px rgb(0, 255, 149);
+  background-color: rgb(216, 216, 216);
+  border: solid 2px rgb(160, 160, 160);
   color: rgb(46, 46, 46);
-  padding-left: 5px;
-  transition: 0.2s;
+  -webkit-appearance: none;
+  font-weight: bold;
 }
 
 .create-input:focus {
   outline: 0;
-  border: solid 1px rgb(0, 255, 149); 
+  border: solid 2px rgb(0, 255, 149); 
   background-color: rgb(240, 240, 240);
 }
 
 .datepicker:focus {
   outline: 0;
-  border: solid 1px rgb(0, 255, 149); 
+  border: solid 2px rgb(0, 255, 149); 
   background-color: rgb(240, 240, 240);
 }
 
 .datepicker {
   border: 0;
-  background-color: rgb(216, 216, 216);
+  background-color: inherit;
   border-radius: 5px;
-  font-size: 17px;
-  width: 300px;
-  height: 30px;
+  font-size: 21px;
+  width: 270px;
+  padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-left: solid 4px rgb(0, 255, 149);
-  color: rgb(46, 46, 46); 
+  background-color: rgb(216, 216, 216);
+  border: solid 2px rgb(160, 160, 160);
+  color: rgb(46, 46, 46);
+  -webkit-appearance: none;
+  font-weight: bold;
 }
 
 .create-input-submit {
   position: absolute;
   width: 100px;
   height: 50px;
-  top: 290px;
+  bottom: -90px;
   right: 10px;
   border: 0;
   color: rgb(241, 241, 241);
@@ -112,6 +116,8 @@ body {
   transition: 0.2s;
   font-weight: bolder;
   font-size: 20px;
+  border: solid 1px rgb(235, 235, 235);
+
 }
 
 .create-input-submit:hover {
@@ -125,7 +131,7 @@ body {
   position: absolute;
   width: 100px;
   height: 40px;
-  top: 290px;
+  bottom: -90px;
   padding-top: 8px;
   left: 10px;
   border: 0;
@@ -135,6 +141,8 @@ body {
   font-family: "poppins", sans-serif;
   transition: 0.2s;
   font-weight: bolder;
+  border: solid 1px rgb(235, 235, 235);
+
 }
 
 .home-btn-create:hover {

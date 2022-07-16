@@ -23,15 +23,29 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 20px;
+  top: 15px;
   margin-bottom: 100px;
   border-radius: 20px;
 }
 
+.appDescription {
+  position: relative;
+  bottom: -5px;
+  font-weight: bold;
+  color: rgb(143, 143, 143);
+}
+
+.appCode {
+  position: relative;
+  bottom: -30px;
+  font-size: 17px;
+}
+
 .infoBox {
   position: absolute;
-  width: 1100px;
-  height: 100px;
+  max-width: 1100px;
+  width: 81%;
+  height: 120px;
   top: 40px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -45,7 +59,8 @@
 
 .plansContainer {
   position: absolute;
-  width: 1120px;
+  max-width: 1120px;
+  width: 93%;
   height: 1830px;
   top: 240px;
   left: 50%;
@@ -54,8 +69,6 @@
   border: solid 4px rgb(220, 220, 220);
   box-shadow: 13px 13px 40px 0px rgba(0,0,0,1);
   box-shadow: inset 10px 10px 40px 0px #FFFFFF;
-
-
 }
 
 .planBtns {
@@ -74,7 +87,8 @@
 .section {
   position: absolute;
   background-color: rgb(224, 224, 224);
-  width: 1080px;
+  max-width: 1080px;
+  width: 96.42%;
   height: 220px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -119,11 +133,11 @@
   display: inline-block;
   position: absolute;
   font-size: 24px;
-  top: 30px;
+  top: 50px;
 }
 
 .saveData {
-  right: 0;
+  right: 30%;
   border: 0;
   width: 300px;
   font-weight: bold;
@@ -142,12 +156,10 @@
 }
 
 .planPageHomeBtn {
-  height: 40px;
-  left: 0;
+  left: 32%;
+  padding: 10px;
   text-align: center;
-  width: 100px;
   display: inline-block;
-  padding-top: 0px;
   color: rgb(72, 255, 0);
   font-weight: bold;
   transition: 0.3s;
@@ -168,8 +180,8 @@
   font-size: 15px;
   width: 250px;
   height: 28px;
-  left: 50%;
   padding-top: 9px;
+  left: 50%;
   transform: translate(-50%, 0);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
@@ -177,18 +189,20 @@
 
 .planDayInfo {
   position: absolute;
-  left: 30px;
-  width: 200px;
+  left: 0;
+  max-width: 300px;
+  width: 27.85%;
   height: 180px;
   top: 20px;
-
+  z-index: 3;
 }
 
 .plan {
   position: absolute;
   background-color: rgb(240, 240, 240);
-  right: 30px;
-  width: 800px;
+  right: 0;
+  max-width: 800px;
+  width: 71.42%;
   height: 180px;
   top: 20px;
   border-radius: 10px;
@@ -198,7 +212,7 @@
   position: absolute;
   color: rgb(99, 99, 99);
   font-size: 25px;
-  top: 20px;
+  top: 10px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -207,50 +221,55 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  top: 45px;
+  top: 35px;
+}
+
+.input-table {
+  position: absolute;
+  display: inline-flexbox;
+  bottom: 0;
+  width: 90%;
+  height: 100px;
+  left: 1vw;
+  text-align: center;
 }
 
 .inputMin {
-  position: absolute;
+  position: relative;
   background-color: rgb(240, 240, 240);
-  width: 80px;
-  border: 0px;
-  border-left: solid 2px rgb(207, 207, 207);
+  border: solid 2px rgb(190, 190, 190);
   border-radius: 5px;
-  display: inline;
-  left: 1px;
-  bottom: 10px;
-  height: 40px;
+  display: inline-block;
   text-align: center;
   transition: 0.4s;
   outline: 0;
-
+  font-size: 18px;
+  margin: 5px;
+  padding: 5px;
+  width: 80px;
 }
 
 .inputMin:focus {
-  border-left: solid 0px rgb(240, 240, 240);
-  box-shadow: 0 0 6px rgb(143, 143, 143) inset;
+  border: solid 2px rgb(160, 160, 160);
 }
 
 .inputMax {
-  position: absolute;
+  position: relative;
   background-color: rgb(240, 240, 240);
-  width: 80px;
-  border: 0px;
-  border-left: solid 2px rgb(207, 207, 207);
+  border: solid 2px rgb(190, 190, 190);
   border-radius: 5px;
-  display: inline;
-  right: 5px;
-  bottom: 10px;
-  height: 40px;
+  display: inline-block;
   text-align: center;
   transition: 0.4s;
   outline: 0;
+  font-size: 18px;
+  margin: 5px;
+  padding: 5px;
+  width: 80px;
 }
 
 .inputMax:focus {
-  border-left: solid 0px rgb(240, 240, 240);
-  box-shadow: 0 0 6px rgb(143, 143, 143) inset;
+  border: solid 2px rgb(160, 160, 160);
 }
 
 .-break {
@@ -307,16 +326,27 @@
 
 .planHours {
   position: absolute;
-  width: inherit;
+  width: 100%;
   height: 25px;
   font-size: 20px;
   top: 0;
   background-color: #f8f8f8;
   left: 50%;
   transform: translate(-50%, 0);
+  display: flex;
+  justify-content: space-between;
   z-index: 3;
   border-radius: 10px 10px 0 0;
   color: rgb(110, 110, 110);
+}
+
+.hour {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  width: auto;
+  top: 3px;
 }
 
 .left {
@@ -456,12 +486,14 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 600px;
-  height: 150px;
+  max-width: 600px;
+  width: 80%;
+  height: 160px;
   top: 150px;
   border-radius: 30px;
   border: solid 4px rgb(206, 206, 206);
   background-color: rgb(241, 215, 215);
+  text-align: center;
   box-shadow: 0px 20px 30px -10px rgba(0,0,0,0.5);
 }
 
@@ -471,7 +503,7 @@
   transform: translate(-50%, 0);
   color: rgb(163, 26, 26);
   top: 20px;
-  width: 500px;
+  width: 80%;
 }
 
 .error-btn {

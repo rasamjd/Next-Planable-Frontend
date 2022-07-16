@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import "./plan-component.css"
 import axios from 'axios';
+import Hours from "./hours.component.js"
 
 function Plan() {
 
@@ -120,8 +121,8 @@ function Plan() {
         const model = (day) => {
           return ( <div
               className="planBar"
-              style={{left: `${day.num1 / 24 * 800}px`,
-                    right: `${(24 - day.num2) / 24 * 800}px`}}
+              style={{left: `${day.num1 / 24 * 100}%`,
+                    right: `${(24 - day.num2) / 24 * 100}%`}}
             ></div>
           )}
 
@@ -188,7 +189,7 @@ function Plan() {
             <div className="planLogo"></div>
             <h4 className="appTitle" title='Plan Name'>{}</h4>
             <h5 className="appCode" title='Plan Code'>{params.code}</h5>
-            <p className="appDescription">Add your schedule every day and review others.</p>
+            <p className="appDescription">Add your schedule for every day and review others.</p>
           </div>
           <div className="plansContainer">
             
@@ -196,24 +197,28 @@ function Plan() {
               <div className="planDayInfo">
                 <b className="satPlanDay planDay">sat.</b>
                 <p className="satPlanDayDate planDayDate">5.6.2022</p>
-                <input type="number"
-                      className='inputMinsat inputMin'
-                      onChange={setChanges}
-                      name="satMin"
-                />
-                <span className='-break'>-</span>
-                <input type="number"
-                      className='inputMaxsat inputMax'
-                      onChange={setChanges}
-                      name="satMax"
-                />
+                <div className="input-table">
+                  <input type="number"
+                        className='inputMin inputMinsat'
+                        onChange={setChanges}
+                        name="satMin"
+                        placeholder='from'
+                  />
+                  <input type="number"
+                        className='inputMaxsat inputMax'
+                        onChange={setChanges}
+                        name="satMax"
+                        placeholder='to'
+                  />
+                </div>
               </div>
               <div className="satPlan plan 1">
                 <div className="satPlanHours planHours">
+                  <Hours/>
                 </div>
                 <div className="satPlanBar planBar"
-                  style={{left: `${planData.satMin / 24 * 800}px`,
-                          right: `${(24 - planData.satMax) / 24 * 800}px`}}>   
+                  style={{left: `${planData.satMin / 24 * 100}%`,
+                          right: `${(24 - planData.satMax) / 24 * 100}%`}}>   
                 </div>
                 {prevSat}
               </div>
@@ -224,20 +229,24 @@ function Plan() {
               <div className="planDayInfo">
                 <b className="sunPlanDay planDay">sun.</b>
                 <p className="sunPlanDayDate planDayDate">5.6.2022</p>
-                <input type="number"
-                      className='inputMinsun inputMin'
-                      onChange={setChanges}
-                      name="sunMin"
-                />
-                <span className='-break'>-</span>
-                <input type="number"
-                      className='inputMaxsun inputMax'
-                      onChange={setChanges}
-                      name="sunMax"
-                />
+                <div className="input-table">
+                  <input type="number"
+                        className='inputMin inputMinsun '
+                        onChange={setChanges}
+                        name="sunMin"
+                        placeholder='from'
+                  />
+                  <input type="number"
+                        className='inputMaxsun inputMax'
+                        onChange={setChanges}
+                        name="sunMax"
+                        placeholder='to'
+                  />
+                </div>
               </div>
               <div className="sunPlan plan 1">
                 <div className="sunPlanHours planHours">
+                  <Hours/>
                 </div>
                 <div className="sunPlanBar planBar"
                   style={{left: `${planData.sunMin / 24 * 800}px`,
@@ -252,20 +261,24 @@ function Plan() {
               <div className="planDayInfo">
                 <b className="monPlanDay planDay">mon.</b>
                 <p className="monPlanDayDate planDayDate">5.6.2022</p>
-                <input type="number"
-                      className='inputMinmon inputMin'
-                      onChange={setChanges}
-                      name="monMin"
-                />
-                <span className='-break'>-</span>
-                <input type="number"
-                      className='inputMaxmon inputMax'
-                      onChange={setChanges}
-                      name="monMax"
-                />
+                <div className="input-table">
+                  <input type="number"
+                        className='inputMin inputMinmon'
+                        onChange={setChanges}
+                        name="monMin"
+                        placeholder='from'
+                  />
+                  <input type="number"
+                        className='inputMaxmon inputMax'
+                        onChange={setChanges}
+                        name="monMax"
+                        placeholder='to'
+                  />
+                </div>
               </div>
               <div className="monPlan plan 1">
                 <div className="monPlanHours planHours">
+                  <Hours/>
                 </div>
                 <div className="monPlanBar planBar"
                   style={{left: `${planData.monMin / 24 * 800}px`,
@@ -280,20 +293,24 @@ function Plan() {
               <div className="planDayInfo">
                 <b className="tuePlanDay planDay">tue.</b>
                 <p className="tuePlanDayDate planDayDate">5.6.2022</p>
-                <input type="number"
-                      className='inputMintue inputMin'
-                      onChange={setChanges}
-                      name="tueMin"
-                />
-                <span className='-break'>-</span>
-                <input type="number"
-                      className='inputMaxtue inputMax'
-                      onChange={setChanges}
-                      name="tueMax"
-                />
+                <div className="input-table">
+                  <input type="number"
+                        className='inputMin inputMintue '
+                        onChange={setChanges}
+                        name="tueMin"
+                        placeholder='from'
+                  />
+                  <input type="number"
+                        className='inputMaxtue inputMax'
+                        onChange={setChanges}
+                        name="tueMax"
+                        placeholder='to'
+                  />
+                </div>  
               </div>
               <div className="tuePlan plan 1">
                 <div className="tuePlanHours planHours">
+                  <Hours/>
                 </div>
                 <div className="tuePlanBar planBar"
                   style={{left: `${planData.tueMin / 24 * 800}px`,
@@ -308,20 +325,24 @@ function Plan() {
               <div className="planDayInfo">
                 <b className="wedPlanDay planDay">wed.</b>
                 <p className="wedPlanDayDate planDayDate">5.6.2022</p>
-                <input type="number"
-                      className='inputMinwed inputMin'
-                      onChange={setChanges}
-                      name="wedMin"
-                />
-                <span className='-break'>-</span>
-                <input type="number"
-                      className='inputMaxwed inputMax'
-                      onChange={setChanges}
-                      name="wedMax"
-                />
+                <div className="input-table">
+                  <input type="number"
+                        className='inputMin inputMinwed'
+                        onChange={setChanges}
+                        name="wedMin"
+                        placeholder='from'
+                  />
+                  <input type="number"
+                        className='inputMaxwed inputMax'
+                        onChange={setChanges}
+                        name="wedMax"
+                        placeholder='to'
+                  />
+                </div>  
               </div>
               <div className="wedPlan plan 1">
                 <div className="wedPlanHours planHours">
+                  <Hours/>
                 </div>
                 <div className="wedPlanBar planBar"
                   style={{left: `${planData.wedMin / 24 * 800}px`,
@@ -336,20 +357,24 @@ function Plan() {
               <div className="planDayInfo">
                 <b className="thuPlanDay planDay">thu.</b>
                 <p className="thuPlanDayDate planDayDate">5.6.2022</p>
-                <input type="number"
-                      className='inputMinthu inputMin'
-                      onChange={setChanges}
-                      name="thuMin"
-                />
-                <span className='-break'>-</span>
-                <input type="number"
-                      className='inputMaxthu inputMax'
-                      onChange={setChanges}
-                      name="thuMax"
-                />
+                <div className="input-table">
+                  <input type="number"
+                        className='inputMin inputMinthu'
+                        onChange={setChanges}
+                        name="thuMin"
+                        placeholder='from'
+                  />
+                  <input type="number"
+                        className='inputMaxthu inputMax'
+                        onChange={setChanges}
+                        name="thuMax"
+                        placeholder='to'
+                  />
+                </div>
               </div>
               <div className="thuPlan plan 1">
                 <div className="thuPlanHours planHours">
+                  <Hours/>
                 </div>
                 <div className="thuPlanBar planBar"
                   style={{left: `${planData.thuMin / 24 * 800}px`,
@@ -364,20 +389,24 @@ function Plan() {
               <div className="planDayInfo">
                 <b className="friPlanDay planDay">fri.</b>
                 <p className="friPlanDayDate planDayDate">5.6.2022</p>
-                <input type="number"
-                      className='inputMinfri inputMin'
-                      onChange={setChanges}
-                      name="friMin"
-                />
-                <span className='-break'>-</span>
-                <input type="number"
-                      className='inputMaxfri inputMax'
-                      onChange={setChanges}
-                      name="friMax"
-                />
+                <div className="input-table">
+                  <input type="number"
+                        className='inputMin inputMinfri'
+                        onChange={setChanges}
+                        name="friMin"
+                        placeholder='from'
+                  />
+                  <input type="number"
+                        className='inputMaxfri inputMax'
+                        onChange={setChanges}
+                        name="friMax"
+                        placeholder='to'
+                  />
+                </div>  
               </div>
               <div className="friPlan plan 1">
                 <div className="friPlanHours planHours">
+                  <Hours/>
                 </div>
                 <div className="friPlanBar planBar"
                   style={{left: `${planData.friMin / 24 * 800}px`,
@@ -438,7 +467,7 @@ function Plan() {
     return (
       <div className="errorTable">
         <code className="error">Ooops!
-          Looks like the Plan you're looking for doesn't exist.</code>
+          Looks like the Plan you're looking for doesn't exist :/</code>
         <Link to="/join-plan" style={{ textDecoration: 'none' }} className="error-btn">Back
           </Link>
       </div>

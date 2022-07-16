@@ -4,7 +4,7 @@ import logo from "../PLANABLE(2).png"
 
 function Entry() {
     return (
-        <div className="container">
+        <div className="entry-container">
           <img src={logo} className="logo"/>
           <p className="description">
             Create or Join a plan with people you're looking forward to have a meeting with.

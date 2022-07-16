@@ -43,7 +43,7 @@ function JoinPlan() {
 
   return (
     <div className="container">
-      <div className='table'>
+      <div className='join-table'>
         <div className='join-title'>
           Join a Plan
         </div>
