@@ -424,7 +424,7 @@ function Plan() {
                         fontSize: `${nameCSS.fontSize}`,
                         color: `${nameCSS.color}`,
                         left: `${nameCSS.left}`
-                }}>Add Username</span>
+                }}>Username</span>
               <input 
               minLength="2"
               maxLength="20"

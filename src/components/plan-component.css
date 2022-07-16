@@ -137,15 +137,14 @@
 }
 
 .saveData {
-  right: 30%;
+  right: 32%;
   border: 0;
-  width: 300px;
   font-weight: bold;
   background-color: rgb(72, 255, 0);
-  color: rgb(230, 230, 230);
-  height: 60px;
+  color: rgb(0, 126, 73);
   transition: 0.3s;
-
+  padding: 1%;
+  border: solid 2px rgb(72, 255, 0);
 }
 
 .saveData:hover {
@@ -246,8 +245,8 @@
   font-size: 18px;
   margin: 5px;
   padding: 5px;
-  width: 80px;
-}
+  max-width: 80px;
+  width: 50%;}
 
 .inputMin:focus {
   border: solid 2px rgb(160, 160, 160);
@@ -265,7 +264,8 @@
   font-size: 18px;
   margin: 5px;
   padding: 5px;
-  width: 80px;
+  max-width: 80px;
+  width: 50%;
 }
 
 .inputMax:focus {
@@ -330,14 +330,14 @@
   height: 25px;
   font-size: 20px;
   top: 0;
-  background-color: #f8f8f8;
+  background-color: rgb(150, 150, 150);
   left: 50%;
   transform: translate(-50%, 0);
   display: flex;
   justify-content: space-between;
   z-index: 3;
-  border-radius: 10px 10px 0 0;
-  color: rgb(110, 110, 110);
+  border-radius: 10px 10px 10px 10px;
+  color: rgb(241, 241, 241);
 }
 
 .hour {
@@ -380,7 +380,8 @@
 .planBar {
   position: absolute;
   height: inherit;
-  background-color: rgba(57, 255, 123, 0.2);
+  background-color: rgba(57, 255, 123, 0.1);
+  box-shadow: 0 0 15px -10px rgb(0, 255, 149) inset;
   transition: 0.5s;
   width: auto;  
 }
@@ -415,7 +416,7 @@
   color: rgb(0, 138, 80);
   font-weight: bold;
   pointer-events: none;
-  left: 58px;
+  left: 18px;
 }
 
 .nameFinalInput {

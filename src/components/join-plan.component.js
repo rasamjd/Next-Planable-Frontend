@@ -49,7 +49,7 @@ function JoinPlan() {
         </div>
         <form className='form'>
         
-        <label>Plan Code</label>
+        <label className='join-label'>Plan Code</label>
         <br />
         <input type="number" 
               className='joinInput'

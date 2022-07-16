@@ -1,8 +1,17 @@
 .hour {
   position: relative;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 0.3cm;
   display: inline-block;
-  width: auto;
+  width: 1%;
   top: 3px;
+  text-align: center;
+}
+
+.odd {
+  color: white;
+}
+
+.even {
+  color: #000;
 }

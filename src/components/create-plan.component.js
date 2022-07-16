@@ -68,7 +68,7 @@ function CreatePlan() {
             Create a Plan
           </div>
           <form className='form' onSubmit={handleSubmit}>
-            <label>Plan Name</label>
+            <label className='create-label'>Plan Name</label>
             <br />
             <input className='create-input'
                   type="text"
@@ -76,7 +76,7 @@ function CreatePlan() {
                   placeholder="E.g. Foorball plan"
               />
             <br />
-            <label>Plan Code</label>
+            <label className='create-label'>Plan Code</label>
             <br />
             <input className='create-input' 
                   type="number" 
@@ -84,7 +84,7 @@ function CreatePlan() {
                   readOnly
               />
             <br />
-            <label>Date</label>
+            <label className='create-label'>Date</label>
             <br />
             <DatePicker className='datepicker' 
                         onChange={onChangeDate}

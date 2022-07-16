@@ -32,7 +32,7 @@ body {
   position: absolute;
   margin: auto;
   background-color: rgb(72, 255, 0);
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 0 0 15px 15px;
   top: 0;
   width: 200px;
@@ -52,7 +52,7 @@ body {
   left: 0px;
   padding-top: 20px;
   border-radius: 30px;
-  box-shadow: 0 0 40px -9px rgb(92, 92, 92);
+  box-shadow: 0 0 90px -40px rgb(92, 92, 92);
   text-align: center;
   font-size: 20px;
   left: 50%;
@@ -60,18 +60,21 @@ body {
 
 }
 
+.join-label {
+  color: rgb(160, 160, 160);
+}
+
 .joinInput {
-  border: 0;
   background-color: inherit;
   border-radius: 5px;
-  font-size: 21px;
+  font-size: 19px;
   width: 270px;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(230, 230, 230);
   border: solid 2px rgb(160, 160, 160);
-  color: rgb(46, 46, 46);
+  color: rgb(78, 78, 78);
   -webkit-appearance: none;
   font-weight: bold;
 }
