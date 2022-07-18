@@ -36,7 +36,7 @@ function CreatePlan() {
         .then((resault) => console.log(`Plan info posted successfully: ${resault}`))
         .catch((error) => console.log(error.response.data))
     }
-    else {
+    else { 
       alert("You should pick a plan name with at least 3 characters!")
     }
   }
@@ -82,15 +82,6 @@ function CreatePlan() {
                   type="number" 
                   value={createState.planCode}
                   readOnly
-              />
-            <br />
-            <label className='create-label'>Date</label>
-            <br />
-            <DatePicker className='datepicker' 
-                        onChange={onChangeDate}
-                        shouldCloseOnSelect={false}
-                        //placeholderText="Pick a Start Date (optional)"
-                        selected={createState.planCreateDate}
               />
             <br />
             <input className='create-input-submit' 

@@ -26,6 +26,8 @@ function Plan() {
   const [prevThu, setPrevThu] = useState([])
   const [prevFri, setPrevFri] = useState([])
 
+  const [people, setPeople] = useState([])
+
   const [userData, setUserData] = useState({
     name: "", code: 0, username: ""
   })
@@ -78,7 +80,7 @@ function Plan() {
           bottom: "12px",
           fontSize: "22px",
           color: "rgb(0, 138, 80)",
-          left: "58px"
+          left: "10px"
         }
       })
     }
@@ -107,8 +109,10 @@ function Plan() {
   const params = useParams();
 
   useEffect(() => {
+                                                                                        // Getting inserted hours (users)
     axios.get(`https://mern-planable.herokuapp.com/plan/${params.code}`, { params: {
-      code: params.code
+      code: params.code,
+      status: 0
     }})
       .then((days) => {
         if (days.data.length == 0) {
@@ -122,15 +126,22 @@ function Plan() {
           return ( <div
               className="planBar"
               style={{left: `${day.num1 / 24 * 100}%`,
-                    right: `${(24 - day.num2) / 24 * 100}%`}}
-            ></div>
+                    right: `${(24 - day.num2) / 24 * 100}%`}}>
+            </div>
           )}
+
+        const pModel = (day) => {
+          return (
+            <p className='person'>{day.username}</p>
+          )
+        }
 
         days.data.map((day) => {
 
           switch (day.day) {
             case "sat":
               setPrevSat((prev) => [...prev, model(day)])
+              setPeople((prev) => [...prev, pModel(day)])
               break;
             case "sun":
               setPrevSun((prev) => [...prev, model(day)])
@@ -150,13 +161,15 @@ function Plan() {
             case "fri":
               setPrevFri((prev) => [...prev, model(day)])
           }
-        })
+
+
+        }
+        )
         }
       })
       .catch((err) => console.log(err))
   }, [])
-  //console.log(otherDays)
-
+                                                                                          // Saving inserted Data
   const saveData = () => {
     if (userData.username.length > 1) {
       const daysData = [
@@ -192,11 +205,14 @@ function Plan() {
             <p className="appDescription">Add your schedule for every day and review others.</p>
           </div>
           <div className="plansContainer">
-            
+          <div className='peopleTest'>
+              {people}
+            </div>
+
             <div className="satSec section">
               <div className="planDayInfo">
                 <b className="satPlanDay planDay">sat.</b>
-                <p className="satPlanDayDate planDayDate">5.6.2022</p>
+                <p className="satPlanDayDate planDayDate"></p>
                 <div className="input-table">
                   <input type="number"
                         className='inputMin inputMinsat'
@@ -228,7 +244,7 @@ function Plan() {
             <div className="sunSec section">
               <div className="planDayInfo">
                 <b className="sunPlanDay planDay">sun.</b>
-                <p className="sunPlanDayDate planDayDate">5.6.2022</p>
+                <p className="sunPlanDayDate planDayDate"></p>
                 <div className="input-table">
                   <input type="number"
                         className='inputMin inputMinsun '
@@ -249,8 +265,8 @@ function Plan() {
                   <Hours/>
                 </div>
                 <div className="sunPlanBar planBar"
-                  style={{left: `${planData.sunMin / 24 * 800}px`,
-                          right: `${(24 - planData.sunMax) / 24 * 800}px`}}>
+                  style={{left: `${planData.sunMin / 24 * 100}%`,
+                          right: `${(24 - planData.sunMax) / 24 * 100}%`}}>
                 </div>
                 {prevSun}
               </div>
@@ -260,7 +276,7 @@ function Plan() {
             <div className="monSec section">
               <div className="planDayInfo">
                 <b className="monPlanDay planDay">mon.</b>
-                <p className="monPlanDayDate planDayDate">5.6.2022</p>
+                <p className="monPlanDayDate planDayDate"></p>
                 <div className="input-table">
                   <input type="number"
                         className='inputMin inputMinmon'
@@ -281,8 +297,8 @@ function Plan() {
                   <Hours/>
                 </div>
                 <div className="monPlanBar planBar"
-                  style={{left: `${planData.monMin / 24 * 800}px`,
-                          right: `${(24 - planData.monMax) / 24 * 800}px`}}>
+                  style={{left: `${planData.monMin / 24 * 100}%`,
+                          right: `${(24 - planData.monMax) / 24 * 100}%`}}>
                 </div>
                 {prevMon}
               </div>
@@ -292,7 +308,7 @@ function Plan() {
             <div className="tueSec section">
               <div className="planDayInfo">
                 <b className="tuePlanDay planDay">tue.</b>
-                <p className="tuePlanDayDate planDayDate">5.6.2022</p>
+                <p className="tuePlanDayDate planDayDate"></p>
                 <div className="input-table">
                   <input type="number"
                         className='inputMin inputMintue '
@@ -313,8 +329,8 @@ function Plan() {
                   <Hours/>
                 </div>
                 <div className="tuePlanBar planBar"
-                  style={{left: `${planData.tueMin / 24 * 800}px`,
-                          right: `${(24 - planData.tueMax) / 24 * 800}px`}}>
+                  style={{left: `${planData.tueMin / 24 * 100}%`,
+                          right: `${(24 - planData.tueMax) / 24 * 100}%`}}>
                 </div>
                 {prevTue}
               </div>
@@ -324,7 +340,7 @@ function Plan() {
             <div className="wedSec section">
               <div className="planDayInfo">
                 <b className="wedPlanDay planDay">wed.</b>
-                <p className="wedPlanDayDate planDayDate">5.6.2022</p>
+                <p className="wedPlanDayDate planDayDate"></p>
                 <div className="input-table">
                   <input type="number"
                         className='inputMin inputMinwed'
@@ -345,8 +361,8 @@ function Plan() {
                   <Hours/>
                 </div>
                 <div className="wedPlanBar planBar"
-                  style={{left: `${planData.wedMin / 24 * 800}px`,
-                          right: `${(24 - planData.wedMax) / 24 * 800}px`}}>
+                  style={{left: `${planData.wedMin / 24 * 100}%`,
+                          right: `${(24 - planData.wedMax) / 24 * 100}%`}}>
                 </div>
                 {prevWed}
               </div>
@@ -356,7 +372,7 @@ function Plan() {
             <div className="thuSec section">
               <div className="planDayInfo">
                 <b className="thuPlanDay planDay">thu.</b>
-                <p className="thuPlanDayDate planDayDate">5.6.2022</p>
+                <p className="thuPlanDayDate planDayDate"></p>
                 <div className="input-table">
                   <input type="number"
                         className='inputMin inputMinthu'
@@ -377,8 +393,8 @@ function Plan() {
                   <Hours/>
                 </div>
                 <div className="thuPlanBar planBar"
-                  style={{left: `${planData.thuMin / 24 * 800}px`,
-                          right: `${(24 - planData.thuMax) / 24 * 800}px`}}>
+                  style={{left: `${planData.thuMin / 24 * 100}%`,
+                          right: `${(24 - planData.thuMax) / 24 * 100}%`}}>
                 </div>
                 {prevThu}
               </div>
@@ -388,7 +404,7 @@ function Plan() {
             <div className="friSec section">
               <div className="planDayInfo">
                 <b className="friPlanDay planDay">fri.</b>
-                <p className="friPlanDayDate planDayDate">5.6.2022</p>
+                <p className="friPlanDayDate planDayDate"></p>
                 <div className="input-table">
                   <input type="number"
                         className='inputMin inputMinfri'
@@ -409,8 +425,8 @@ function Plan() {
                   <Hours/>
                 </div>
                 <div className="friPlanBar planBar"
-                  style={{left: `${planData.friMin / 24 * 800}px`,
-                          right: `${(24 - planData.friMax) / 24 * 800}px`}}>
+                  style={{left: `${planData.friMin / 24 * 100}%`,
+                          right: `${(24 - planData.friMax) / 24 * 100}%`}}>
                 </div>
                 {prevFri}
               </div>

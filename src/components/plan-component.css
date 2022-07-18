@@ -61,7 +61,7 @@
   position: absolute;
   max-width: 1120px;
   width: 93%;
-  height: 1830px;
+  height: 1780px;
   top: 240px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -96,11 +96,11 @@
 }
 
 .satSec {
-  top: 60px;
+  top: 80px;
 }
 
 .sunSec {
-  top: 300px;
+  top: 310px;
 
 }
 
@@ -110,34 +110,34 @@
 }
 
 .tueSec {
-  top: 780px;
+  top: 770px;
 
 }
 
 .wedSec {
-  top: 1020px;
+  top: 1000px;
 
 }
 
 .thuSec {
-  top: 1260px;
+  top: 1230px;
 
 }
 
 .friSec {
-  top: 1500px;
+  top: 1460px;
 
 }
 
 .planBtn {
   display: inline-block;
   position: absolute;
-  font-size: 24px;
   top: 50px;
 }
 
 .saveData {
-  right: 32%;
+  right: 33%;
+  
   border: 0;
   font-weight: bold;
   background-color: rgb(72, 255, 0);
@@ -145,6 +145,8 @@
   transition: 0.3s;
   padding: 1%;
   border: solid 2px rgb(72, 255, 0);
+  font-size: 20px;
+  padding: 10px;
 }
 
 .saveData:hover {
@@ -163,6 +165,9 @@
   font-weight: bold;
   transition: 0.3s;
   background-color: rgb(240, 240, 240);
+  font-size: 24px;
+  padding: 10px;
+
 }
 
 .planPageHomeBtn:hover {
@@ -216,11 +221,51 @@
   transform: translate(-50%, 0);
 }
 
+.people {
+  position: absolute;
+  width: 80%;
+  bottom: 106px;
+  max-width: 190px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 0;
+}
+
+.peopleTest {
+  position: absolute;
+  width: 80%;
+  max-width: 600px;
+  height: 60px;
+  top: 5px;
+  background-color: rgb(205, 226, 217);
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 2px;
+}
+
+.person {
+  padding: 5px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline;
+  height: 24px;
+  border-radius: 10px;
+  margin: 3px;
+  background-color: rgb(190, 190, 190);
+}
+
+.planPeople:hover {
+  background-color: rgb(186, 255, 209);
+}
+
 .planDayDate {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
   top: 35px;
+  color: rgb(107, 107, 107);
 }
 
 .input-table {
