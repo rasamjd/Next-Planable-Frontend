@@ -26,6 +26,9 @@ function Plan() {
   const [prevThu, setPrevThu] = useState([])
   const [prevFri, setPrevFri] = useState([])
 
+  const [prevSatMin, setPrevSatMin] = useState([])
+  const [prevSatMax, setPrevSatMax] = useState([])
+
   const [people, setPeople] = useState([])
 
   const [userData, setUserData] = useState({
@@ -97,15 +100,17 @@ function Plan() {
   }
 
   const setChanges = (e) => {
-    setPlanData((prevData) => {
-      return {
-        ...prevData,
-        [e.target.name] : e.target.value
-
-      }
-    })
+    if(e.target.value >= 0 && e.target.value <= 24) {
+      setPlanData((prevData) => {
+        return {
+          ...prevData,
+          [e.target.name] : e.target.value
+  
+        }
+      })
+    }
    }
-
+  
   const params = useParams();
 
   useEffect(() => {
@@ -120,7 +125,6 @@ function Plan() {
         }
         else {
           setPlanState(0)
-        console.log(days.data)
 
         const model = (day) => {
           return ( <div
@@ -141,6 +145,7 @@ function Plan() {
           switch (day.day) {
             case "sat":
               setPrevSat((prev) => [...prev, model(day)])
+            
               setPeople((prev) => [...prev, pModel(day)])
               break;
             case "sun":
@@ -162,12 +167,13 @@ function Plan() {
               setPrevFri((prev) => [...prev, model(day)])
           }
 
-
         }
         )
-        }
-      })
+
+      }
+    })
       .catch((err) => console.log(err))
+
   }, [])
                                                                                           // Saving inserted Data
   const saveData = () => {
@@ -212,7 +218,9 @@ function Plan() {
             <div className="satSec section">
               <div className="planDayInfo">
                 <b className="satPlanDay planDay">sat.</b>
-                <p className="satPlanDayDate planDayDate"></p>
+                <p className="satPlanDayDate planDayDate">
+                  
+                </p>
                 <div className="input-table">
                   <input type="number"
                         className='inputMin inputMinsat'
